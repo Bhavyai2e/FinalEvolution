@@ -1,0 +1,8 @@
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\FinalAssignment.csproj.AssemblyReference.cache
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\FinalAssignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\FinalAssignment.AssemblyInfoInputs.cache
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\FinalAssignment.AssemblyInfo.cs
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\FinalAssignment.csproj.CoreCompileInputs.cache
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\FinalAssignment.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\FinalAssignment.RazorAssemblyInfo.cache
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\FinalAssignment.RazorAssemblyInfo.cs

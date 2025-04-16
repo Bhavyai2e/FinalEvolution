@@ -1,0 +1,11 @@
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\FinalAssignment.exe
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\appsettings.json
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\FinalAssignment.dll
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\FinalAssignment.deps.json
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\FinalAssignment.runtimeconfig.json
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\FinalAssignment.pdb
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\bhavya.paliwal\source\repos\FinalAssignment\obj\Debug\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

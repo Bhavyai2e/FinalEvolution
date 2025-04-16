@@ -1,0 +1,11 @@
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\bin\Debug\net8.0\VehicleRepository.deps.json
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\bin\Debug\net8.0\VehicleRepository.dll
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\bin\Debug\net8.0\VehicleRepository.pdb
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\obj\Debug\net8.0\VehicleRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\obj\Debug\net8.0\VehicleRepository.AssemblyInfoInputs.cache
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\obj\Debug\net8.0\VehicleRepository.AssemblyInfo.cs
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\obj\Debug\net8.0\VehicleRepository.csproj.CoreCompileInputs.cache
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\obj\Debug\net8.0\VehicleRepository.dll
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\obj\Debug\net8.0\refint\VehicleRepository.dll
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\obj\Debug\net8.0\VehicleRepository.pdb
+C:\Users\bhavya.paliwal\source\repos\VehicleRepository\obj\Debug\net8.0\ref\VehicleRepository.dll

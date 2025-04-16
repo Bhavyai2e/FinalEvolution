@@ -1,0 +1,43 @@
+﻿@model IEnumerable<VehicleRepository.Models.Booking>
+
+
+@(
+   ViewData["Title"] = "Vehicle service Booking management system";
+ )
+
+ <h3 class=" booking-title">Vehicle service management system</h3>
+
+ <table class="Booking-table">
+	 <thead>
+		 <tr>
+			 <th>#</th>
+			 <th>Customer Name</th>
+			 <th>Vehicle Number</th>
+			 <th>Service type</th>
+			 <th>Booking Date</th>
+			 <th>Status</th>
+			 <th>Actions</th>
+		 </tr>
+	 </thead>
+	 <tbody>
+		 @if (Model!=null && Model.Count>0)
+		{
+			int count = 1;
+			foreach(var item in Model)
+			{
+				<tr>
+					<td>@count</td>
+					<td>@item.CustomerName</td>
+					<td>@item.VehicleNumber</td>
+					<td>@itemServiceType</td>
+					<td>@item.BookingDate.ToShortDateString()</td>
+					<td>
+						<a href="/Booking/Edit/@item.Id">Edit</a>
+						<a href="/Booking/Delete/@item.Id">Delete</a>
+					</td>
+				</tr>
+				count++;
+			}
+		}
+	</tbody>
+ </table>
