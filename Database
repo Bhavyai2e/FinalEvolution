@@ -1,0 +1,150 @@
+CREATE database Vehicle
+
+DROP TABLE VehicleServiceBooking1;
+
+CREATE TABLE VehicleServiceBooking1 (
+    BookingID INT IDENTITY(1,1) PRIMARY KEY,
+    CustomerName NVARCHAR(100) NOT NULL,
+    ContactNo VARCHAR(15) NOT NULL,
+    VehicleType NVARCHAR(20) NOT NULL CHECK (VehicleType IN (N'car', N'bike', N'SUV')),
+    VehicleNumber NVARCHAR(10) NOT NULL CHECK (VehicleNumber IN (N'AB-12', N'BC-12', N'CD-12')),
+    ServiceType NVARCHAR(30) NOT NULL CHECK (ServiceType IN (N'general', N'engine check', N'Oil change')),
+    BookingDate DATE NOT NULL DEFAULT GETDATE(),
+    ServiceStatus NVARCHAR(30) NOT NULL CHECK (ServiceStatus IN (N'in progress', N'completed', N'cancelled', N'scheduled'))
+);
+SELECT * FROM VehicleServiceBooking1
+
+INSERT INTO VehicleServiceBooking1 
+(CustomerName, ContactNo, VehicleType, VehicleNumber, ServiceType, ServiceStatus)
+VALUES 
+(N'Bhavya', '1234567899', N'bike', N'BC-12', N'Oil change', N'completed');
+
+INSERT INTO VehicleServiceBooking1 
+(CustomerName, ContactNo, VehicleType, VehicleNumber, ServiceType, ServiceStatus)
+VALUES 
+(N'Paliwal', '1234567666', N'car', N'AB-12', N'general', N'in progress');
+
+CREATE PROCEDURE GetAllBookings
+AS
+BEGIN
+    SELECT * FROM VehicleServiceBooking1;
+END;
+
+EXEC GetAllBookings
+
+CREATE PROCEDURE UpdateBookingDetails
+    @BookingID INT,
+    @CustomerName NVARCHAR(100),
+    @ContactNo VARCHAR(15),
+    @VehicleType NVARCHAR(20),       
+    @VehicleNumber NVARCHAR(10),
+    @ServiceType NVARCHAR(30),      
+    @ServiceStatus NVARCHAR(30)      
+AS
+BEGIN
+    UPDATE VehicleServiceBooking1
+    SET 
+        CustomerName = @CustomerName,
+        ContactNo = @ContactNo,
+        VehicleType = @VehicleType,
+        VehicleNumber = @VehicleNumber,
+        ServiceType = @ServiceType,
+        ServiceStatus = @ServiceStatus
+    WHERE BookingID = @BookingID;
+END;
+
+
+
+EXEC UpdateBookingDetails
+    @BookingID = 1,
+    @CustomerName = N'Sheetal',
+    @ContactNo = '98765435550',
+    @VehicleType = N'bike',
+    @VehicleNumber = N'CD-12',
+    @ServiceType = N'general',
+    @ServiceStatus = N'scheduled';
+
+
+	CREATE PROCEDURE InsertBookingDetails
+    @CustomerName NVARCHAR(100),
+    @ContactNo VARCHAR(15),
+    @VehicleType NVARCHAR(20),
+    @VehicleNumber NVARCHAR(10),
+    @ServiceType NVARCHAR(30),
+    @ServiceStatus NVARCHAR(30)
+AS
+BEGIN
+    INSERT INTO VehicleServiceBooking1 (
+        CustomerName,
+        ContactNo,
+        VehicleType,
+        VehicleNumber,
+        ServiceType,
+        ServiceStatus
+    )
+    VALUES (
+        @CustomerName,
+        @ContactNo,
+        @VehicleType,
+        @VehicleNumber,
+        @ServiceType,
+        @ServiceStatus
+    );
+END;
+
+
+
+EXEC InsertBookingDetails
+    @CustomerName = N'Bhavya',
+    @ContactNo = '987685510',
+    @VehicleType = N'SUV',
+    @VehicleNumber = N'CD-12',
+    @ServiceType = N'oil change',
+    @ServiceStatus = N'completed';
+
+
+
+CREATE PROCEDURE DeleteBookingDetails
+    @BookingID INT
+AS
+BEGIN
+    DELETE FROM VehicleServiceBooking1
+    WHERE BookingID = @BookingID;
+END;
+
+EXEC DeleteBookingDetails @BookingID = 5;
+
+
+SELECT BookingID, CustomerName, BookingDate
+FROM VehicleServiceBooking1;
+
+CREATE VIEW View_BookingDetails1
+AS
+SELECT
+    BookingID,
+    CustomerName,
+    VehicleNumber,
+    ServiceType,
+    BookingDate,
+    ServiceStatus
+FROM
+    VehicleServiceBooking1;
+
+SELECT * FROM View_BookingDetails1
+
+
+CREATE TABLE DropDownDetails(DetailedId int PRIMARY KEY IDENTITY(1,1),
+BookingID INT FOREIGN KEY REFERENCES VehicleServiceBooking1(BookingID),
+MAKE NVARCHAR(100),
+MODEL NVARCHAR(100),
+Notes NVARCHAR(MAX),
+YEAR INT,
+EstimatedDeliveryDate Date
+);
+
+
+INSERT INTO DropDownDetails(BookingID, MAKE,MODEL,YEAR,Notes,EstimatedDeliveryDate)
+Values (1,'Toyota', 'Camry',2020,'Check engine light on', DATEADD(DAY,2,GETDATE())
+);
+
+SELECT * FROM DropDownDetails;
